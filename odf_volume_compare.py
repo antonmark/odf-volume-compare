@@ -180,10 +180,10 @@ def gather_cephfs_subvol_snapshot_list(tools_pod_name, gathered_cephfs_ceph_info
     for X in gathered_subvol_snapshot_info:
         for key, value in X.items():
             json_out = (json.loads(value))
-            subvol_snapshot_list_out.update(key:json_out)
+            subvol_snapshot_list_out.update({key:json_out})
     
     pprint(json_out)
-    pprint({key:json_out})
+    
         
     return(subvol_snapshot_list_out)
 
