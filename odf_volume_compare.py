@@ -181,6 +181,8 @@ def gather_cephfs_subvol_snapshot_list(tools_pod_name, gathered_cephfs_ceph_info
         for key, value in X.items():
             json_out = (json.loads(value))
             pprint(json_out)
+            type(json_out)
+            type({key:json_out})
             subvol_snapshot_list_out.update({key:json_out})
         
     return(subvol_snapshot_list_out)
